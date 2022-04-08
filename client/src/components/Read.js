@@ -68,7 +68,7 @@ const Read = () => {
         </tbody>
       </table>
       <Link to='/post'>
-        <button type="button" class="btn btn-primary">Add list</button>
+        <button type="button" className="btn btn-primary">Add list</button>
       </Link>
     </div>
   )

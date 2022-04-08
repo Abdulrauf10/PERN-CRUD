@@ -6,7 +6,7 @@ const Update = () => {
   const navigate = useNavigate();
   const [monday, setMonday] = useState('');
   const [friday, setFriday] = useState('');
-  const [id, setId] = useState();
+  const [id, setId] = useState(null);
 
    const updateData = () => {
     axios.put(`http://localhost:5000/put/role/${id}`, {
@@ -22,7 +22,7 @@ const Update = () => {
     setId(localStorage.getItem('id_role')) 
     setMonday(localStorage.getItem('monday')) 
     setFriday(localStorage.getItem('friday')) 
-  }, []);
+  },[]);
 
   return (
     <div>
@@ -50,7 +50,7 @@ const Update = () => {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary" onClick={updateData}>Submit</button>
+        <button type="button" className="btn btn-primary" onClick={updateData}>Submit</button>
       </form>
     </div>
   )
